@@ -4,9 +4,10 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  port: 8080,
+  port: 3306,
   user: 'root',
-  password: `${process.env.SQLKEY}`,
+  // password: `${process.env.SQLKEY}`,
+  password: `MySQL2019!!`,
   database: 'burgers_db'
 });
 
