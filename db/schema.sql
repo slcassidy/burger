@@ -1,7 +1,7 @@
 -- Created the DB "burgers_db" 
 CREATE DATABASE burgers_db;
 USE burgers_db;
-
+drop table if exists burgers
 -- Created the table "actors" 
 CREATE TABLE burgers
 (

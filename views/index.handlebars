@@ -1,5 +1,5 @@
 <br>
-<h1>Burgers</h1><br>
+<h1>Eat-Da-Burger!</h1><br>
 
 
 
@@ -9,21 +9,22 @@
             <h2>Available Burgers</h2>
             <ul>
                 {{#each burgers}}
-
+                          {{#unless devoured}}
                 <li>
                     {{!-- If the the value is false then display  devoured =table name!!!--}}
-                    {{#unless devoured}}
+              
 
                     {{this.burger_name}}
                     <button data-burgerid="{{this.id}}" data-burgereat="{{this.devoured}}" class="eat-burger">Devour it!</button>
 
-                    {{/unless}}
+                    
                 </li>
+                {{/unless}}
                 {{/each}}
             </ul>
         </div>
         <div class="col-6">
-            <h2>Yummy in my Belly</h2>
+            <h2>Yummy in my Tummy</h2>
 
             <ul>
                 {{#each burgers}}

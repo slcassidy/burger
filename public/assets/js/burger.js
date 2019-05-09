@@ -30,7 +30,6 @@ $(function() {
   
       const newBur = {
         name: $('#bu').val().trim(),
-        // sleepy: $('[name=sleepy]:checked').val().trim()
       };
   
       // Send the POST request.
@@ -46,18 +45,5 @@ $(function() {
       );
     });
   
-    // $('.delete-cat').on('click', function(event) {
-    //   const id = $(this).data('id');
-  
-    //   // Send the DELETE request.
-    //   $.ajax('/api/cats/' + id, {
-    //     type: 'DELETE'
-    //   }).then(
-    //     function() {
-    //       console.log('deleted cat', id);
-    //       // Reload the page to get the updated list
-    //       location.reload();
-    //     }
-    //   );
-    // });
+
   });
