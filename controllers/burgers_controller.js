@@ -38,7 +38,7 @@ router.put('/api/burger/:id', function(req, res) {
 
   // sleepy is sent as a string to our server
   // convert it to a boolean before passing it to the database
-  let hungry = false;
+  let devoured = false;
 //   if (req.body.devoured === 'false') {
 //     hungry = true;
 //   } 
@@ -48,7 +48,7 @@ router.put('/api/burger/:id', function(req, res) {
 
   burger.update(
     {
-        hungry: hungry
+        devoured: devoured
     },
     condition,
     function(result) {
@@ -57,6 +57,7 @@ router.put('/api/burger/:id', function(req, res) {
         return res.status(404).end();
       }
       res.status(200).end();
+      console.log()
 
     }
   );

@@ -12,12 +12,13 @@
       {{> cats/cat-block sleep=true}}
     {{/unless}} --}}
                 <li>
-                    {{#unless hungry}}
+                         {{!-- If the the value is false then display  devoured =table name!!!--}}
+                    {{#unless devoured}}
                     {{!-- {{this.id}}  --}}
                     {{this.burger_name}}
 
                     {{!-- <button data-movieid="{{this.id}}" class="delmovie">Devour it!</button> --}}
-                    <button data-burgerid="{{this.id}}" class="eat-burger">Devour it!</button>
+                    <button data-burgerid="{{this.id}}" data-burgereat="{{this.devoured}}" class="eat-burger">Devour it!</button>
 
                     {{/unless}}
                 </li>
@@ -29,6 +30,8 @@
 
             <ul>
                 {{#each burgers}}
+                {{!-- If the the value is true then display --}}
+                {{#if devoured}}
                 <li>
                     {{this.burger_name}}
 
@@ -36,7 +39,7 @@
                 </li>
                 {{!-- {{#if sleepy}} --}}
                 {{!-- {{> burger/burg}} --}}
-                {{!-- {{/if}} --}}
+                {{/if}}
 
                 {{/each}}
             </ul>

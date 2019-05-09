@@ -14,7 +14,7 @@ $(function() {
         data: eatten
       }).then(
         function() {
-          console.log('changed devour', eatten);
+          console.log('changed devour', id);
           // Reload the page to get the updated list
           location.reload();
         }
