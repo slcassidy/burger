@@ -7,21 +7,7 @@
     <div class="row">
         <div class="col-6">
             <h2>Available Burgers</h2>
-            <ul>
-                {{#each burgers}}
-                          {{#unless devoured}}
-                <li>
-                    {{!-- If the the value is false then display  devoured =table name!!!--}}
-              
-
-                    {{this.burger_name}}
-                    <button data-burgerid="{{this.id}}" data-burgereat="{{this.devoured}}" class="eat-burger">Devour it!</button>
-
-                    
-                </li>
-                {{/unless}}
-                {{/each}}
-            </ul>
+            {{> burger-check}}
         </div>
         <div class="col-6">
             <h2>Yummy in my Tummy</h2>
