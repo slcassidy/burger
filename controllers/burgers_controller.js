@@ -23,42 +23,44 @@ router.get('/', function(req, res) {
   });
 });
 
-// router.post('/api/cats', function(req, res) {
-//   cat.create(['name', 'sleepy'], [req.body.name, req.body.sleepy], function(result) {
-//     // Send back the ID of the new quote
-//     res.json({ id: result.insertId });
-//   });
-// });
+router.post('/api/burger', function(req, res) {
+    burger.create(['burger_name', 'devoured'], [req.body.name, 0], function(result) {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
+  });
 
-// router.put('/api/cats/:id', function(req, res) {
-//   const condition = {id: req.params.id}
+});
 
-//   console.log('condition', condition);
+router.put('/api/burger/:id', function(req, res) {
+  const condition = {id: req.params.id}
+
+  console.log('condition', condition);
 
   // sleepy is sent as a string to our server
   // convert it to a boolean before passing it to the database
-//   let sleepy;
-//   if (req.body.sleepy === 'true') {
-//     sleepy = true;
-//   } else {
-//     sleepy = false;
+  let hungry = false;
+//   if (req.body.devoured === 'false') {
+//     hungry = true;
+//   } 
+//   else {
+//     hungry = false;
 //   }
 
-//   cat.update(
-//     {
-//       sleepy: sleepy
-//     },
-//     condition,
-//     function(result) {
-//       if (result.changedRows === 0) {
-//         // If no rows were changed, then the ID must not exist, so 404
-//         return res.status(404).end();
-//       }
-//       res.status(200).end();
+  burger.update(
+    {
+        hungry: hungry
+    },
+    condition,
+    function(result) {
+      if (result.changedRows === 0) {
+        // If no rows were changed, then the ID must not exist, so 404
+        return res.status(404).end();
+      }
+      res.status(200).end();
 
-//     }
-//   );
-// });
+    }
+  );
+});
 
 // router.delete("/api/cats/:id", function(req, res) {
 //   const condition = { id: req.params.id }
