@@ -1,4 +1,5 @@
-<br><h1>Burgers</h1><br>
+<br>
+<h1>Burgers</h1><br>
 
 
 
@@ -8,16 +9,12 @@
             <h2>Available Burgers</h2>
             <ul>
                 {{#each burgers}}
-                {{!-- {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}} --}}
-                <li>
-                         {{!-- If the the value is false then display  devoured =table name!!!--}}
-                    {{#unless devoured}}
-                    {{!-- {{this.id}}  --}}
-                    {{this.burger_name}}
 
-                    {{!-- <button data-movieid="{{this.id}}" class="delmovie">Devour it!</button> --}}
+                <li>
+                    {{!-- If the the value is false then display  devoured =table name!!!--}}
+                    {{#unless devoured}}
+
+                    {{this.burger_name}}
                     <button data-burgerid="{{this.id}}" data-burgereat="{{this.devoured}}" class="eat-burger">Devour it!</button>
 
                     {{/unless}}
@@ -26,7 +23,7 @@
             </ul>
         </div>
         <div class="col-6">
-            <h2>Yum in my Belly</h2>
+            <h2>Yummy in my Belly</h2>
 
             <ul>
                 {{#each burgers}}
@@ -37,8 +34,7 @@
 
 
                 </li>
-                {{!-- {{#if sleepy}} --}}
-                {{!-- {{> burger/burg}} --}}
+
                 {{/if}}
 
                 {{/each}}

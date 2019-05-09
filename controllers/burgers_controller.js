@@ -32,13 +32,15 @@ router.post('/api/burger', function(req, res) {
 });
 
 router.put('/api/burger/:id', function(req, res) {
+    console.log(req.param.id)
   const condition = {id: req.params.id}
+//   const condition = {id: req.params.burgerid}
 
   console.log('condition', condition);
 
   // sleepy is sent as a string to our server
   // convert it to a boolean before passing it to the database
-  let devoured = false;
+  let devoured = true;
 //   if (req.body.devoured === 'false') {
 //     hungry = true;
 //   } 
@@ -52,6 +54,7 @@ router.put('/api/burger/:id', function(req, res) {
     },
     condition,
     function(result) {
+        console.log(devoured);
       if (result.changedRows === 0) {
         // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
