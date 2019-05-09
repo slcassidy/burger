@@ -1,4 +1,4 @@
-<h1>Burgers</h1>
+<br><h1>Burgers</h1><br>
 
 
 
@@ -13,50 +13,52 @@
     {{/unless}} --}}
                 <li>
                     {{#unless hungry}}
-                    {{!-- {{hungry = false}} --}}
-                    <p>
-                        {{!-- {{this.id}}. --}}
-                         {{this.burger_name}}
+                    {{!-- {{this.id}}  --}}
+                    {{this.burger_name}}
 
-                        {{!-- <button data-movieid="{{this.id}}" class="delmovie">Devour it!</button> --}}
-                        <button data-burgerid="{{this.id}}" class="eat-burger">Devour it!</button>
-                    </p>
+                    {{!-- <button data-movieid="{{this.id}}" class="delmovie">Devour it!</button> --}}
+                    <button data-burgerid="{{this.id}}" class="eat-burger">Devour it!</button>
+
                     {{/unless}}
                 </li>
                 {{/each}}
             </ul>
         </div>
-        <div class="row col-6">
-            {{!-- <div class="col-6"> --}}
-
+        <div class="col-6">
             <h2>Yum in my Belly</h2>
 
-            {{!-- {{!-- <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul> --}}
+            <ul>
+                {{#each burgers}}
+                <li>
+                    {{this.burger_name}}
 
-            {{!-- </div> --}}
+
+                </li>
+                {{!-- {{#if sleepy}} --}}
+                {{!-- {{> burger/burg}} --}}
+                {{!-- {{/if}} --}}
+
+                {{/each}}
+            </ul>
         </div>
 
     </div>
 
     {{!-- Add the burger --}}
-       <div class="row">
+    <div class="row">
         <div class="col-12">
-            
-<h2>Add a Burger</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="bu">Burger Name:</label>
-    {{!-- <input type="text" id="ca" name="name">  Originaly Ca in the code to review --}}
-     <input type="text" id="bu" name="name">
-  </div>
+            <h2>Add a Burger</h2>
+            <form class="create-form">
 
-  <button type="submit">Submit</button>
-</form>
+                <div class="form-group">
+                    <label for="bu">Burger Name:</label>
+                    {{!-- <input type="text" id="ca" name="name">  Originaly Ca in the code to review --}}
+                    <input type="text" id="bu" name="name">
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
