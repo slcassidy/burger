@@ -5,11 +5,11 @@ const mysql = require('mysql');
 // console.log(process.env.SQLKEY);
 
 const connection = mysql.createConnection({
-  // host: 'gtizpe105piw2gfq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-  host: 'localhost',
+  host: 'gtizpe105piw2gfq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  // host: 'localhost',
   port: 3306,
-  // user: 'bapkuhsth3xu7h97',
-  user: 'root',
+  user: 'bapkuhsth3xu7h97',
+  // user: 'root',
   // password: process.env.SQLKEY,
   password: process.env.SQLKEY,
   // password: process.env.SQLKEY,
