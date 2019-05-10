@@ -6,22 +6,22 @@ const router = express.Router();
 const burger = require('../models/burger.js');
 
 // Create all our routes and set up logic within those routes where required.
-// router.get('/', function(req, res) {
-//   burger.all(function(data) {
-//     const hbsObject = {
-//       burgers: data
-//     };
-//     console.log(hbsObject);
+router.get('/', function(req, res) {
+  burger.all(function(data) {
+    const hbsObject = {
+      burgers: data
+    };
+    console.log(hbsObject);
 
-//     // if (err) {
-//     //     return res.status(500).end();
-//     //   }
-//     // console.log(data);
-//     res.render('index', hbsObject);
-//     // res.render('index', { burger: data });
+    // if (err) {
+    //     return res.status(500).end();
+    //   }
+    // console.log(data);
+    res.render('index', hbsObject);
+    // res.render('index', { burger: data });
     
-//   });
-// });
+  });
+});
 
 router.post('/api/burger', function(req, res) {
     burger.create(['burger_name', 'devoured'], [req.body.name, 0], function(result) {
