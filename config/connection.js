@@ -5,7 +5,7 @@ const mysql = require('mysql');
 // console.log(process.env.SQLKEY);
 
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: 'gtizpe105piw2gfq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
   port: 3306,
   user: 'bapkuhsth3xu7h97',
   // user: 'root',
