@@ -7,7 +7,9 @@ const mysql = require('mysql');
 const connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
-  user: 'root',
+  user: 'bapkuhsth3xu7h97',
+  // user: 'root',
+  // password: process.env.SQLKEY,
   password: process.env.SQLKEY,
   // password: process.env.SQLKEY,
   // password: `MySQL2019!!`,
