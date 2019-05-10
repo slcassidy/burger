@@ -6,7 +6,7 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: 'gtizpe105piw2gfq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-  // host: 'localhost',
+    // host: 'localhost',
   port: 3306,
   user: 'bapkuhsth3xu7h97',
   // user: 'root',
@@ -14,7 +14,8 @@ const connection = mysql.createConnection({
   password: process.env.SQLKEY,
   // password: process.env.SQLKEY,
   // password: `MySQL2019!!`,
-  database: 'burgers_db'
+  // database: 'burgers_db'
+  database: 'ikxvk1qp0im4o7dh'
 });
 
 // Make connection.
