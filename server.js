@@ -1,48 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const express = require('express');
 
 const PORT = process.env.PORT || 3000;
@@ -70,6 +25,8 @@ app.use(routes);
 app.listen(PORT, function() {
   console.log('App now listening at localhost:' + PORT);
 });
+
+module.exports = app;
 
 
 
