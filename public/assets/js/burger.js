@@ -19,7 +19,7 @@ $(function() {
         function() {
           console.log('changed devour', food);
           // Reload the page to get the updated list
-          location.reload();
+          // location.reload();
         }
       );
     });

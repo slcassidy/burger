@@ -27,6 +27,10 @@ router.post('/api/burger', function(req, res) {
     burger.create(['burger_name', 'devoured'], [req.body.name, 0], function(result) {
     // Send back the ID of the new quote
     // res.json({ id: result.insertId });
+  if(!req.body.name){
+    // res.statusCode = 500;
+    res.status(500).json({err: "stop"});
+  }else
      res.json(result);
   });
 
@@ -39,15 +43,9 @@ router.put('/api/burger/:id', function(req, res) {
 
   console.log('condition', condition);
 
-  // sleepy is sent as a string to our server
+
   // convert it to a boolean before passing it to the database
   let devoured = true;
-//   if (req.body.devoured === 'false') {
-//     hungry = true;
-//   } 
-//   else {
-//     hungry = false;
-//   }
 
   burger.update(
     {
