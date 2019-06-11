@@ -10,9 +10,7 @@ const connection = mysql.createConnection({
   port: 3306,
   user: 'bapkuhsth3xu7h97',
   // user: 'root',
-  // password: process.env.SQLKEY,
   password: process.env.SQLKEY,
-  // password: process.env.SQLKEY,
   // password: `MySQL2019!!`,
   // database: 'burgers_db'
   database: 'ikxvk1qp0im4o7dh'

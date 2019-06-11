@@ -77,11 +77,42 @@ describe('POST /api/burger', function() {
   // postive and negative above completed
   // 2 more to go
 
-  it('should data in the database', function(done) {
-    // const reqBody = {
-    //   name: 'BLT Burger',
-    //   devoured: false
-    // };
+  it('should be data in the database', function(done) {
+    const reqBody = {
+      name: 'Bacon Beef Burger',
+      devoured: true
+    };
+
+    // POST the request body to the server
+    request
+      .get('/')
+      .send(reqBody)
+      .end(function(err, res) {
+        const responseStatus = res.status;
+        // const responseBody = res.body;
+
+        // Run assertions on the response
+
+        expect(err).to.be.null;
+        // expect(err).to.not.be.null
+
+        expect(responseStatus).to.equal(200);
+        
+
+        // expect(responseBody)
+        //   .to.be.an('object')
+        //   .that.includes({ affectedRows: 1 });
+
+        // The `done` function is used to end any asynchronous tests
+        done();
+      });
+  });
+
+  it('Data should NOT be in the database', function(done) {
+    const reqBody = {
+      name: 'Road Kill Burger',
+      devoured: false
+    };
 
     // POST the request body to the server
     request
@@ -99,9 +130,9 @@ describe('POST /api/burger', function() {
         expect(responseStatus).to.equal(200);
         
 
-        // expect(responseBody)
-        //   .to.be.an('object')
-        //   .that.includes({ affectedRows: 1 });
+        expect(responseBody)
+          .to.be.an('object')
+          .that.not.includes({ affectedRows: 0 });
 
         // The `done` function is used to end any asynchronous tests
         done();
